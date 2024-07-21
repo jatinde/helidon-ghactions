@@ -1,0 +1,12 @@
+name: Helidon Project compile
+on: [push]
+
+jobs:
+  HelidonMavenPackage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v4.2.1
+        with:
+          distribution: 'corretto'
+          java-version: '22'
+          cache: 'maven'
